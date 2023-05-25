@@ -2,7 +2,12 @@ import emojisList from "../emojis.json"
 import "./emojis-list.styles.css"
 
 const EmojisList = () => {
-    const emojis = emojisList.slice(0, 12)
+    const emojis = getRandomEmojis(12);
+
+    function getRandomEmojis(count) {
+        const shuffledEmojis = emojisList.sort(() => 0.5 - Math.random());
+        return shuffledEmojis.slice(0, count);
+    }
 
     return (
         <div className="emoji-grid">
