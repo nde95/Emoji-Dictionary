@@ -1,5 +1,5 @@
 import emojisList from "../emojis.json";
-import { useState } from "react";
+import EmojiCard from "../emoji-card/emoji-card.component";
 import "./emojis-list.styles.css";
 
 const EmojisList = () => {
@@ -10,22 +10,13 @@ const EmojisList = () => {
     return shuffledEmojis.slice(0, count);
   }
 
-  const handleCopyToClipboard = (emojiSymbol) => {
-    navigator.clipboard.writeText(emojiSymbol);
-    // You can also show a notification or perform any other actions after copying
-    console.log("Copied to clipboard:", emojiSymbol);
-  };
-
   return (
-    <div className="emoji-grid">
-      {emojis.map((emoji, index) => (
-        <div key={index} className="emoji-card">
-          <div className="emoji-item" onClick={() => handleCopyToClipboard(emoji.symbol)}>
-            <div className="emoji-symbol">{emoji.symbol}</div>
-            <div className="emoji-title">{emoji.title}</div>
-          </div>
+    <div className="emoji-grid-container">
+        <div className="emoji-grid">
+        {emojis.map((emoji, index) => (
+            <EmojiCard key={index} emoji={emoji} />
+        ))}
         </div>
-      ))}
     </div>
   );
 };

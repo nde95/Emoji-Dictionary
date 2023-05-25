@@ -1,5 +1,5 @@
 import emojisList from "../emojis.json";
-import "./emoji-search.styles.css";
+import EmojiCard from "../emoji-card/emoji-card.component";
 
 const EmojiSearch = ({ searchTerm }) => {
   const emojis = emojisList;
@@ -14,18 +14,15 @@ const EmojiSearch = ({ searchTerm }) => {
     });
   }
 
-  return (
+
+return (
     <div className="emoji-grid">
       {filteredEmojis.map((emoji, index) => (
-        <div key={index} className="emoji-card">
-          <div className="emoji-item">
-            <div className="emoji-symbol">{emoji.symbol}</div>
-            <div className="emoji-title">{emoji.title}</div>
-          </div>
-        </div>
+            <EmojiCard key={index} emoji={emoji} />
       ))}
     </div>
   );
 };
+
 
 export default EmojiSearch;
