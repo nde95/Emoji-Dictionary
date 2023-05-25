@@ -2,7 +2,7 @@ import emojisList from "../emojis.json"
 import "./emojis-list.styles.css"
 
 const EmojisList = () => {
-    const emojis = emojisList
+    const emojis = emojisList.slice(0, 12)
 
     return (
         <div className="emoji-grid">
