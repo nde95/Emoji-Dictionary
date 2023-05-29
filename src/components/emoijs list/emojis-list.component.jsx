@@ -3,7 +3,7 @@ import EmojiCard from "../emoji-card/emoji-card.component";
 import "./emojis-list.styles.css";
 
 const EmojisList = () => {
-  const emojis = getRandomEmojis(12);
+  const emojis = getRandomEmojis(16);
 
   function getRandomEmojis(count) {
     const shuffledEmojis = emojisList.sort(() => 0.5 - Math.random());
