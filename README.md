@@ -1,5 +1,5 @@
 # Emoji Dictionary
 
-A simple webapp that allows you to search any emoji and copy it to your clipboard by clicking the card. (Designed as a workaround for desktop users only)
+Webapp made in React for quick searching of Emoji's on desktop systems. Much easier to have a search system with every emoji than to Google it or open up Discord to copy and paste it. 
 
 Live version: https://emojidictionary.vercel.app/
